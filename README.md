@@ -1,6 +1,6 @@
-# PYGAME+PYGBAG template
+# PyGame gravity demo
 
-A working template to start coding. Just a colored screen and some infrastructure.
+Moving object with speed and gravity. SPACE to boost, ESC to quit.
 
 ### deploy virtual environment
 
