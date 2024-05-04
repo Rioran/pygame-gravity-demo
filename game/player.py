@@ -25,7 +25,7 @@ class Player(pygame.sprite.Sprite):
     def update(self):
         self.y_speed += 1
         self.rect.y += self.y_speed
-        if self.rect.bottom > self.scene.bottom:
+        if self.rect.bottom > self.scene.bottom or self.rect.top < self.scene.top:
             # print('Bye, player!')
             # self.kill()
             self.y_speed *= -1
