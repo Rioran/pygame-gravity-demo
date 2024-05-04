@@ -1,4 +1,5 @@
 from pathlib import Path
+from random import randint
 
 import pygame
 
@@ -19,7 +20,8 @@ class Player(pygame.sprite.Sprite):
         self.scene = pygame.display.get_surface().get_rect()
         print(f'area bottom = {self.scene.bottom}')
         # self.rect.x = self.scene.centerx
-        self.rect.centerx = self.scene.centerx
+        # self.rect.centerx = self.scene.centerx
+        self.rect.x = randint(0,self.scene.right)
         self.rect.y = 100
 
     def update(self):
