@@ -4,7 +4,7 @@ from random import randint
 import pygame
 
 
-#print(f'{__file__ = }, {Path().absolute() = }')
+# print(f'{__file__ = }, {Path().absolute() = }')
 CURRENT_FOLDER = Path(__file__).parent
 
 
@@ -21,7 +21,7 @@ class Player(pygame.sprite.Sprite):
         print(f'area bottom = {self.scene.bottom}')
         # self.rect.x = self.scene.centerx
         # self.rect.centerx = self.scene.centerx
-        self.rect.x = randint(0,self.scene.right)
+        self.rect.x = randint(0, self.scene.right)
         self.rect.y = 100
 
     def update(self):
