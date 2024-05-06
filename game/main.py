@@ -20,7 +20,7 @@ async def main():
 
     screen.fill('aquamarine')  # https://www.pygame.org/docs/ref/color_list.html
 
-    player = Player()
+    player = Player()  # Sprite: Surface, Rectangle
     all_sprites = pygame.sprite.RenderPlain((player, ))
 
     while True:
