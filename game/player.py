@@ -58,4 +58,5 @@ class Player(pygame.sprite.Sprite):
         self.x_speed = randint(-40, 40)
         self.y_speed = randint(0, 40)
 
+
 print('for push')
