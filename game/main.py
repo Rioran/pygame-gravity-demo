@@ -1,13 +1,16 @@
 import asyncio
+import random
 import sys
 
 import pygame
 
+from brick import Brick
 from player import Player
 
 
 FPS = 30
 SCREEN_SIZE = (1200, 800)
+NUMBER_OF_BRICKS = random.randint(1, 10)
 
 
 async def main():
@@ -22,6 +25,10 @@ async def main():
 
     player = Player()  # Sprite: Surface, Rectangle
     all_sprites = pygame.sprite.RenderPlain((player, ))
+
+    # Создаем кирпичи
+    bricks = [Brick() for _ in range(NUMBER_OF_BRICKS)]
+    all_sprites.add(bricks)
 
     while True:
         for event in pygame.event.get():
