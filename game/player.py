@@ -21,7 +21,7 @@ class Player(pygame.sprite.Sprite):
 
         self.scene = pygame.display.get_surface().get_rect()
         print(f'area bottom = {self.scene.bottom}')
-        self.rect.centerx = self.scene.centerx
+        self.rect.x = randint(0, self.scene.right)
         self.rect.y = 100
 
         self.scene = pygame.display.get_surface().get_rect()
@@ -32,7 +32,6 @@ class Player(pygame.sprite.Sprite):
         self.scene = pygame.display.get_surface().get_rect()
         print(f'area left = {self.scene.left}')
         self.rect.centerx = self.scene.centerx
-
 
     def update(self):
         self.y_speed += 1

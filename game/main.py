@@ -1,4 +1,5 @@
 import asyncio
+from random import randint
 import sys
 
 import pygame
@@ -8,6 +9,7 @@ from player import Player
 
 FPS = 30
 SCREEN_SIZE = (1200, 800)
+COUNT_OF_THE_PLAYERS = randint(1, 5)
 
 
 async def main():
@@ -20,8 +22,9 @@ async def main():
 
     screen.fill('aquamarine')  # https://www.pygame.org/docs/ref/color_list.html
 
-    player = Player()  # Sprite: Surface, Rectangle
-    all_sprites = pygame.sprite.RenderPlain((player, ))
+    # player = Player()  # Sprite: Surface, Rectangle
+    players = [Player() for _ in range(COUNT_OF_THE_PLAYERS)]
+    all_sprites = pygame.sprite.RenderPlain(players)
 
     while True:
         for event in pygame.event.get():
@@ -33,7 +36,8 @@ async def main():
                 sys.exit()
 
             if event.key == pygame.K_SPACE:
-                player.boost()
+                for player in players:
+                    player.boost()
 
         all_sprites.update()
 
