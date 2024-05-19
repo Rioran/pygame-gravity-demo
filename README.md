@@ -1,6 +1,6 @@
 # PyGame gravity demo
 
-Moving object with speed and gravity. SPACE to boost, ESC to quit.
+Moving object with speed and gravity. SPACE to boost, Q for split, ESC to quit,
 
 ### deploy virtual environment
 

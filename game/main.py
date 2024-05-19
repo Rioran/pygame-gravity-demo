@@ -33,7 +33,16 @@ async def main():
                 sys.exit()
 
             if event.key == pygame.K_SPACE:
-                player.boost()
+                for sprite in all_sprites:
+                    sprite.boost()
+
+            if event.key == pygame.K_q:
+                for sprite in all_sprites:
+                    x_pos, y_pos = sprite.rect.x, sprite.rect.y
+                    all_sprites.add(Player(x_pos, y_pos))
+                all_sprites.draw(screen)
+                for sprite in all_sprites:
+                    sprite.boost()
 
         all_sprites.update()
 
